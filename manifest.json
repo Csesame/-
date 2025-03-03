@@ -2,8 +2,7 @@
   "manifest_version": 3,
   "name": "閲覧時間トラッカー",
   "version": "1.0",
-  "description": "閲覧時間トラッカーは閲覧していたサイトの閲覧時間を表示する拡張機能です．",
-  "permissions": ["storage", "tabs", "activeTab"],
+  "permissions": ["storage", "tabs", "activeTab", "webNavigation", "scripting"],
   "background": {
     "service_worker": "background.js"
   },
@@ -13,7 +12,5 @@
       "js": ["content.js"]
     }
   ],
-  "action": {
-    "default_popup": "popup.html"
-  }
+  "host_permissions": ["<all_urls>"]
 }
